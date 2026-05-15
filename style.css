@@ -46,6 +46,8 @@ button:hover{
   width:100%;
   max-width:1240px;
   margin:auto;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 /* =========================================================
@@ -53,7 +55,7 @@ button:hover{
 ========================================================= */
 
 section{
-  padding:100px;
+  padding:100px 0;
 }
 
 /* =========================================================
@@ -62,11 +64,11 @@ section{
 
 .header{
   width:100%;
+  background:#fff;
+  border-bottom:1px solid #eee;
   position:sticky;
   top:0;
   z-index:1000;
-  background:#fff;
-  border-bottom:1px solid #eee;
 }
 
 .navbar{
@@ -74,10 +76,11 @@ section{
   align-items:center;
   justify-content:space-between;
   gap:40px;
+  min-height:90px;
 }
 
 .logo img{
-  width:190px;
+  width:180px;
 }
 
 .nav-links{
@@ -95,10 +98,9 @@ section{
 
 .contact-btn{
   background:#2e3192;
-  color:#fff;
-  padding:12px 22px;
+  color:#fff !important;
+  padding:12px 24px;
   border-radius:999px;
-  font-weight:600;
 }
 
 /* =========================================================
@@ -114,7 +116,7 @@ section{
   gap:10px;
   color:#777;
   font-size:14px;
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
 
 .product-wrapper{
@@ -125,14 +127,14 @@ section{
 }
 
 /* =========================================================
-   GALLERY
+   PRODUCT GALLERY
 ========================================================= */
 
 .main-image{
   position:relative;
   overflow:hidden;
   border-radius:24px;
-  background:#f2f2f2;
+  background:#f3f3f3;
   aspect-ratio:1/1;
 }
 
@@ -176,9 +178,8 @@ section{
 .thumb{
   aspect-ratio:1/1;
   border-radius:14px;
-  overflow:hidden;
-  border:1px solid #ddd;
   background:#eee;
+  border:1px solid #ddd;
 }
 
 .thumb.active{
@@ -226,7 +227,7 @@ section{
   content:"";
   position:absolute;
   left:0;
-  top:9px;
+  top:8px;
   width:8px;
   height:8px;
   border-radius:50%;
@@ -346,7 +347,7 @@ section{
 
 .tech-table{
   overflow:hidden;
-  border-radius:14px;
+  border-radius:16px;
   border:1px solid rgba(255,255,255,0.1);
   background:rgba(255,255,255,0.03);
 }
@@ -385,7 +386,7 @@ section{
 }
 
 /* =========================================================
-   COMMON GRID
+   FEATURE / TESTIMONIAL / PORTFOLIO GRIDS
 ========================================================= */
 
 .feature-grid,
@@ -396,23 +397,13 @@ section{
   gap:24px;
 }
 
-.applications-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
-}
-
-/* =========================================================
-   CARDS
-========================================================= */
-
 .feature-card,
 .testimonial-card,
 .portfolio-card{
   background:#fff;
   border:1px solid #e5e5e5;
   border-radius:24px;
-  padding:28px;
+  padding:30px;
   transition:0.3s ease;
 }
 
@@ -427,10 +418,16 @@ section{
    APPLICATIONS
 ========================================================= */
 
+.applications-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
 .application-card{
   position:relative;
   overflow:hidden;
-  border-radius:30px;
+  border-radius:28px;
   aspect-ratio:3/4;
 }
 
@@ -596,7 +593,7 @@ section{
 @media(max-width:1200px){
 
   section{
-    padding:80px;
+    padding:80px 0;
   }
 
 }
@@ -633,17 +630,18 @@ section{
     grid-template-columns:1fr 1fr;
   }
 
+  .product-content h1,
+  .tech-heading h2,
+  .cta-content h2{
+    font-size:42px;
+  }
+
 }
 
 @media(max-width:800px){
 
   section{
     padding:80px 48px;
-  }
-
-  .navbar{
-    flex-wrap:wrap;
-    gap:20px;
   }
 
   .feature-grid,
@@ -673,6 +671,7 @@ section{
   .navbar{
     flex-direction:column;
     align-items:flex-start;
+    gap:20px;
   }
 
   .nav-links{
