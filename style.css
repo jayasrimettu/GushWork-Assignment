@@ -187,9 +187,7 @@ img{
     width:150px;
   }
 
-  .table-row{
-    grid-template-columns:1fr;
-  }
+  
 
   .phone-row{
     flex-direction:column;
@@ -501,6 +499,50 @@ section{
   .section-heading h2,
   .cta-content h2{
     font-size:26px;
+  }
+
+}
+/* FIX ORIGINAL COLORS */
+
+.technical{
+  background:#071224;
+  color:#fff;
+}
+
+.features-section,
+.faq-section,
+.applications-section,
+.process-section,
+.testimonials-section,
+.portfolio-section{
+  background:#fafafa;
+}
+
+.resources{
+  background:#fff;
+}
+
+/* FIX TABLE */
+
+.tech-table{
+  display:block;
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.table-head{
+  background:rgba(255,255,255,0.08);
+}
+
+/* MOBILE TABLE ONLY */
+
+@media(max-width:600px){
+
+  .table-row{
+    grid-template-columns:1fr;
   }
 
 }
