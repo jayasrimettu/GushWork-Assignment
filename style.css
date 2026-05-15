@@ -2046,31 +2046,10 @@ section{
   gap:16px;
 
   align-items:center;
-}
 
-.social-icons a{
-  width:44px;
-  height:44px;
+  margin-top:20px;
 
-  border:1px solid #ddd;
+  padding-top:20px;
 
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:#111;
-
-  text-decoration:none;
-
-  transition:0.3s ease;
-}
-
-.social-icons a:hover{
-  background:#2e3192;
-
-  color:#fff;
+  border-top:1px solid #ddd;
 }
