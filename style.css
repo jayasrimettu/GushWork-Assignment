@@ -778,4 +778,128 @@ button{
   }
 
 }
-```
+
+
+/* =========================
+   APPLICATIONS FIX
+========================= */
+
+.applications-section{
+  overflow:hidden;
+}
+
+.applications-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+  margin-bottom:50px;
+  flex-wrap:wrap;
+}
+
+.applications-heading{
+  max-width:700px;
+}
+
+.applications-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.application-card{
+  width:100%;
+  min-width:0;
+  height:420px;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+}
+
+.application-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.application-overlay{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding:24px;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.1)
+  );
+  color:#fff;
+}
+
+/* =========================
+   PROCESS FIX
+========================= */
+
+.process-section{
+  overflow:hidden;
+}
+
+.process-box{
+  width:100%;
+  border:1px solid #e5e5e5;
+  border-radius:28px;
+  padding:24px;
+  background:#fff;
+}
+
+.process-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.process-right{
+  width:100%;
+  position:relative;
+}
+
+.process-right img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:24px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1080px){
+
+  .applications-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .process-content{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .applications-grid{
+    grid-template-columns:1fr;
+  }
+
+  .application-card{
+    height:380px;
+  }
+
+  .process-right img{
+    height:320px;
+  }
+
+}
