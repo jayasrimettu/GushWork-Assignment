@@ -332,3 +332,175 @@ img{
   }
 
 }
+/* =========================================
+   FINAL FIGMA RESPONSIVE SPACING FIX
+========================================= */
+
+/* MAX WIDTH */
+
+.container{
+  max-width:1240px;
+  width:100%;
+  margin:auto;
+}
+
+/* 1600px & 1440px */
+
+section{
+  padding:100px 0;
+}
+
+.header{
+  padding:24px 100px;
+}
+
+/* 1200px */
+
+@media(max-width:1200px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .header{
+    padding:24px 80px;
+  }
+
+  .container{
+    padding-left:0;
+    padding-right:0;
+  }
+
+}
+
+/* 1080px */
+
+@media(max-width:1080px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .header{
+    padding:24px 60px;
+  }
+
+  .container{
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .product-wrapper,
+  .process-content,
+  .cta-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .feature-grid,
+  .portfolio-grid,
+  .testimonials-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .applications-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+/* 800px */
+
+@media(max-width:800px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .header{
+    padding:20px 48px;
+  }
+
+  .feature-grid,
+  .portfolio-grid,
+  .testimonials-grid,
+  .applications-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+    width:100%;
+  }
+
+}
+
+/* 480px */
+
+@media(max-width:480px){
+
+  section{
+    padding:48px 0;
+  }
+
+  .header{
+    padding:16px 20px;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+
+  .product-content h1,
+  .tech-heading h2,
+  .feature-heading h2,
+  .faq-heading h2,
+  .applications-heading h2,
+  .process-heading h2,
+  .testimonials-heading h2,
+  .portfolio-heading h2,
+  .section-heading h2,
+  .cta-content h2{
+    font-size:30px;
+    line-height:1.2;
+  }
+
+}
+
+/* 360px */
+
+@media(max-width:360px){
+
+  section{
+    padding:48px 0;
+  }
+
+  .header{
+    padding:14px 16px;
+  }
+
+  .product-content h1,
+  .tech-heading h2,
+  .feature-heading h2,
+  .faq-heading h2,
+  .applications-heading h2,
+  .process-heading h2,
+  .testimonials-heading h2,
+  .portfolio-heading h2,
+  .section-heading h2,
+  .cta-content h2{
+    font-size:26px;
+  }
+
+}
