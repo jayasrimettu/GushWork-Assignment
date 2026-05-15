@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL RESPONSIVE SYSTEM
+   GLOBAL
 ========================= */
 
 *{
@@ -15,13 +15,22 @@ html{
 body{
   font-family:Arial, sans-serif;
   overflow-x:hidden;
-  background:#fff;
   color:#111;
+  background:#fff;
 }
 
-/* =========================
-   MAX WIDTH RULE
-========================= */
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style:none;
+}
 
 .container{
   width:100%;
@@ -29,65 +38,12 @@ body{
   margin:auto;
 }
 
-/* =========================
-   DEFAULT SECTION SPACING
-   1600px & 1440px
-========================= */
-
 section{
-  padding:100px;
+  padding:100px 0;
 }
 
 /* =========================
-   1200px
-========================= */
-
-@media(max-width:1200px){
-
-  section{
-    padding:80px;
-  }
-
-}
-
-/* =========================
-   1080px
-========================= */
-
-@media(max-width:1080px){
-
-  section{
-    padding:80px 60px;
-  }
-
-}
-
-/* =========================
-   800px
-========================= */
-
-@media(max-width:800px){
-
-  section{
-    padding:80px 48px;
-  }
-
-}
-
-/* =========================
-   360px MOBILE
-========================= */
-
-@media(max-width:360px){
-
-  section{
-    padding:48px 16px;
-  }
-
-}
-
-/* =========================
-   HEADER RESPONSIVE
+   HEADER
 ========================= */
 
 .header{
@@ -100,97 +56,296 @@ section{
 }
 
 .navbar{
-  max-width:1240px;
-  margin:auto;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  padding:24px 100px;
+  padding:24px 0;
 }
 
-/* 1200 */
-
-@media(max-width:1200px){
-
-  .navbar{
-    padding:24px 80px;
-  }
-
+.logo img{
+  width:180px;
 }
 
-/* 1080 */
-
-@media(max-width:1080px){
-
-  .navbar{
-    padding:24px 60px;
-  }
-
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:40px;
 }
 
-/* 800 */
-
-@media(max-width:800px){
-
-  .navbar{
-    padding:20px 48px;
-  }
-
+.nav-links a{
+  color:#111;
+  font-size:16px;
+  font-weight:500;
 }
 
-/* 360 */
-
-@media(max-width:360px){
-
-  .navbar{
-    padding:16px;
-  }
-
+.contact-btn{
+  background:#2e3192;
+  color:#fff !important;
+  padding:12px 24px;
+  border-radius:999px;
 }
 
 /* =========================
-   IMAGE ASPECT RATIOS
+   PRODUCT PAGE
 ========================= */
 
-/* PRODUCT IMAGE */
+.product-page{
+  padding-top:60px;
+}
+
+.breadcrumb{
+  display:flex;
+  gap:10px;
+  font-size:14px;
+  color:#777;
+  margin-bottom:40px;
+}
+
+.product-wrapper{
+  display:grid;
+  grid-template-columns:48% 52%;
+  gap:60px;
+}
+
+/* GALLERY */
 
 .main-image{
-  aspect-ratio:1/1;
-  width:100%;
-  overflow:hidden;
+  position:relative;
   border-radius:24px;
-}
-
-/* APPLICATION CARD */
-
-.application-card{
-  aspect-ratio:3/4;
   overflow:hidden;
-  border-radius:28px;
+  aspect-ratio:1/1;
+  background:#f2f2f2;
 }
 
-/* PORTFOLIO IMAGE */
-
-.portfolio-card img{
-  aspect-ratio:16/10;
+.main-image img{
   width:100%;
+  height:100%;
   object-fit:cover;
+  transition:.4s;
+}
+
+.main-image:hover img{
+  transform:scale(1.05);
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  cursor:pointer;
+}
+
+.left-arrow{
+  left:20px;
+}
+
+.right-arrow{
+  right:20px;
+}
+
+.thumbnails{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+
+.thumb{
+  aspect-ratio:1/1;
+  background:#eee;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+
+.thumb.active{
+  border:2px solid #2e3192;
+}
+
+/* CONTENT */
+
+.certifications{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:24px;
+}
+
+.cert-box{
+  border:1px solid #ddd;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.product-content h1{
+  font-size:56px;
+  line-height:1.1;
+  margin-bottom:30px;
+}
+
+.features{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-bottom:30px;
+}
+
+.features li{
+  position:relative;
+  padding-left:20px;
+}
+
+.features li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#2e3192;
+}
+
+/* PRICE BOX */
+
+.price-box{
+  border:1px solid #e5e5e5;
   border-radius:20px;
+  padding:24px;
+  margin-bottom:24px;
 }
 
-/* PROCESS IMAGE */
+.price-label{
+  color:#777;
+  margin-bottom:10px;
+}
 
-.process-right img{
-  aspect-ratio:16/10;
-  width:100%;
-  object-fit:cover;
-  border-radius:28px;
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:20px 0;
+}
+
+.badges span{
+  background:#fff3d6;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+.cert-text{
+  color:#666;
+  font-size:14px;
+}
+
+/* BUTTONS */
+
+.buttons{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+  height:56px;
+  padding:0 24px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.primary-btn{
+  background:#2e3192;
+  color:#fff;
+  border:none;
+}
+
+.secondary-btn{
+  background:#fff;
+  border:1px solid #2e3192;
+}
+
+.secondary-btn:hover{
+  background:#2e3192;
+  color:#fff;
 }
 
 /* =========================
-   GRID RESPONSIVE
+   BRANDS
+========================= */
+
+.brands-content{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.brands-content h2{
+  color:#777;
+  font-size:22px;
+}
+
+.brands-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.brands-row img{
+  max-width:140px;
+  object-fit:contain;
+}
+
+/* =========================
+   COMMON SECTION HEADING
+========================= */
+
+.tech-heading,
+.feature-heading,
+.faq-heading,
+.applications-heading,
+.process-heading,
+.testimonials-heading,
+.portfolio-heading,
+.section-heading{
+  margin-bottom:50px;
+}
+
+.tech-heading h2,
+.feature-heading h2,
+.faq-heading h2,
+.applications-heading h2,
+.process-heading h2,
+.testimonials-heading h2,
+.portfolio-heading h2,
+.section-heading h2{
+  font-size:56px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.tech-heading p,
+.feature-heading p,
+.applications-heading p,
+.process-heading p,
+.testimonials-heading p,
+.portfolio-heading p,
+.section-heading p{
+  color:#666;
+  line-height:1.8;
+  max-width:760px;
+}
+
+/* =========================
+   GRID COMMON
 ========================= */
 
 .feature-grid,
@@ -207,114 +362,48 @@ section{
   gap:24px;
 }
 
-/* 1080 */
-
-@media(max-width:1080px){
-
-  .feature-grid,
-  .testimonials-grid,
-  .portfolio-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .applications-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
-/* 800 */
-
-@media(max-width:800px){
-
-  .feature-grid,
-  .testimonials-grid,
-  .portfolio-grid,
-  .applications-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
 /* =========================
-   PRODUCT SECTION
+   CARDS
 ========================= */
 
-.product-wrapper{
-  display:grid;
-  grid-template-columns:48% 52%;
-  gap:60px;
+.feature-card,
+.testimonial-card,
+.portfolio-card{
+  background:#fff;
+  border:1px solid #e5e5e5;
+  border-radius:24px;
+  padding:30px;
+  transition:.3s;
 }
 
-@media(max-width:1080px){
-
-  .product-wrapper{
-    grid-template-columns:1fr;
-  }
-
+.feature-card:hover,
+.testimonial-card:hover,
+.portfolio-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* =========================
-   TYPOGRAPHY RESPONSIVE
-========================= */
-
-.product-content h1,
-.tech-heading h2,
-.feature-heading h2,
-.applications-heading h2,
-.process-heading h2,
-.testimonials-heading h2,
-.portfolio-heading h2{
-  font-size:56px;
-  line-height:1.1;
+.feature-card h3,
+.testimonial-card h3,
+.portfolio-card h3{
+  font-size:28px;
+  margin-bottom:18px;
+  line-height:1.3;
 }
 
-/* 1080 */
-
-@media(max-width:1080px){
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2{
-    font-size:42px;
-  }
-
+.feature-card p,
+.testimonial-card p,
+.portfolio-card p{
+  color:#666;
+  line-height:1.8;
 }
 
-/* 800 */
-
-@media(max-width:800px){
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2{
-    font-size:34px;
-  }
-
-}
-
-/* 360 */
-
-@media(max-width:360px){
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2{
-    font-size:28px;
-  }
-
+.portfolio-card img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  border-radius:20px;
+  margin:20px 0;
 }
 
 /* =========================
@@ -322,73 +411,148 @@ section{
 ========================= */
 
 .footer{
+  background:#fff;
   border-top:1px solid #eee;
+  padding-top:80px;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:40px;
+  margin-bottom:60px;
 }
 
-@media(max-width:1080px){
+.footer-col{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
 
+.footer-col h4{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.footer-col a,
+.footer-col p{
+  color:#666;
+  font-size:15px;
+  line-height:1.7;
+}
+
+.social-icons{
+  display:flex;
+  gap:14px;
+  margin-top:10px;
+}
+
+.social-icons a{
+  width:40px;
+  height:40px;
+  border:1px solid #ddd;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#555;
+}
+
+.social-icons a:hover{
+  background:#2e3192;
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid #eee;
+  padding:24px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-bottom p{
+  color:#666;
+  font-size:14px;
+}
+
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+
+.footer-links a{
+  color:#666;
+  font-size:14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  section{
+    padding:80px 40px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .product-wrapper,
+  .process-content,
+  .cta-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .feature-grid,
+  .portfolio-grid,
+  .testimonials-grid,
+  .applications-grid,
   .footer-grid{
     grid-template-columns:1fr 1fr;
   }
 
-}
-
-@media(max-width:800px){
-
-  .footer-grid{
-    grid-template-columns:1fr;
+  .product-content h1,
+  .tech-heading h2,
+  .feature-heading h2,
+  .faq-heading h2,
+  .applications-heading h2,
+  .process-heading h2,
+  .testimonials-heading h2,
+  .portfolio-heading h2,
+  .section-heading h2{
+    font-size:42px;
   }
 
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
-button{
-  cursor:pointer;
-  transition:0.3s ease;
-}
-
-button:hover{
-  opacity:0.9;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVE FIXES
-========================= */
-
-/* ---------- 800px ---------- */
-
-@media(max-width:800px){
-
-  body{
-    overflow-x:hidden;
-  }
+@media(max-width:768px){
 
   section{
-    padding:80px 48px;
+    padding:60px 24px;
   }
 
   .navbar{
-    padding:20px 48px;
+    flex-direction:column;
+    gap:20px;
   }
 
   .nav-links{
-    gap:20px;
     flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
   }
 
-  .product-wrapper{
+  .feature-grid,
+  .portfolio-grid,
+  .testimonials-grid,
+  .applications-grid,
+  .footer-grid{
     grid-template-columns:1fr;
-    gap:40px;
   }
 
   .buttons{
@@ -400,65 +564,6 @@ button:hover{
     width:100%;
   }
 
-  .applications-grid,
-  .feature-grid,
-  .portfolio-grid,
-  .testimonials-grid{
-    grid-template-columns:1fr;
-  }
-
-  .process-content{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .catalogue-box,
-  .portfolio-cta,
-  .cta-wrapper{
-    flex-direction:column;
-  }
-
-  .catalogue-right{
-    width:100%;
-  }
-
-  .catalogue-right input{
-    width:100%;
-  }
-
-  .contact-form-box{
-    width:100%;
-  }
-
-}
-
-/* ---------- 600px ---------- */
-
-@media(max-width:600px){
-
-  section{
-    padding:64px 24px;
-  }
-
-  .navbar{
-    padding:18px 24px;
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .nav-links{
-    width:100%;
-    justify-content:center;
-    gap:16px;
-  }
-
-  .logo img{
-    width:150px;
-  }
-
   .product-content h1,
   .tech-heading h2,
   .feature-heading h2,
@@ -467,81 +572,20 @@ button:hover{
   .process-heading h2,
   .testimonials-heading h2,
   .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:32px;
-    line-height:1.2;
-  }
-
-  .feature-card,
-  .testimonial-card,
-  .portfolio-card{
-    padding:24px;
-  }
-
-  .main-image{
-    height:auto;
-    aspect-ratio:1/1;
-  }
-
-  .application-card{
-    height:auto;
-    aspect-ratio:3/4;
-  }
-
-  .process-right img{
-    height:auto;
-  }
-
-  .table-row{
-    grid-template-columns:1fr;
-  }
-
-  .table-row div{
-    padding:16px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .resource-item{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-  }
-
-  .phone-row{
-    flex-direction:column;
-  }
-
-  .phone-row select{
-    width:100%;
-  }
-
-  .catalogue-box,
-  .portfolio-cta,
-  .cta-wrapper{
-    padding:28px;
+  .section-heading h2{
+    font-size:34px;
   }
 
 }
 
-/* ---------- 480px ---------- */
-
 @media(max-width:480px){
 
   section{
-    padding:48px 20px;
+    padding:48px 16px;
   }
 
-  .navbar{
-    padding:16px 20px;
+  .logo img{
+    width:150px;
   }
 
   .nav-links{
@@ -562,109 +606,19 @@ button:hover{
   .process-heading h2,
   .testimonials-heading h2,
   .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
+  .section-heading h2{
     font-size:28px;
-  }
-
-  .product-content p,
-  .feature-card p,
-  .testimonial-card p,
-  .portfolio-card p,
-  .applications-heading p,
-  .process-heading p{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .certifications{
-    gap:8px;
-  }
-
-  .cert-box{
-    font-size:12px;
-    padding:8px 10px;
-  }
-
-  .badges{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .buttons{
-    width:100%;
-  }
-
-  .primary-btn,
-  .secondary-btn{
-    width:100%;
-    font-size:14px;
-  }
-
-  .app-arrow{
-    width:50px;
-    height:50px;
-    font-size:20px;
-  }
-
-  .process-tab{
-    width:100%;
-    text-align:center;
-  }
-
-  .feature-card h3,
-  .testimonial-card h3,
-  .portfolio-card h3{
-    font-size:22px;
-  }
-
-  .footer-col{
-    gap:10px;
-  }
-
-  .social-icons{
-    justify-content:flex-start;
-  }
-
-}
-
-/* ---------- 360px ---------- */
-
-@media(max-width:360px){
-
-  section{
-    padding:48px 16px;
-  }
-
-  .navbar{
-    padding:14px 16px;
-  }
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:24px;
   }
 
   .feature-card,
   .testimonial-card,
-  .portfolio-card,
-  .catalogue-box,
-  .portfolio-cta,
-  .contact-form-box{
+  .portfolio-card{
     padding:20px;
   }
 
-  .footer-bottom p,
-  .footer-links a{
-    font-size:12px;
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
   }
 
 }
