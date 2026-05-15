@@ -281,9 +281,39 @@ button{
   border:1px solid rgba(255,255,255,0.1);
 }
 
+/* =========================
+   TECH TABLE MOBILE FIX
+========================= */
+
+.tech-table{
+  width:100%;
+  overflow-x:auto;
+  border-radius:18px;
+}
+
 .table-row{
+  min-width:600px;
   display:grid;
   grid-template-columns:1fr 1fr;
+}
+
+.table-row div{
+  padding:18px;
+  white-space:normal;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .tech-table{
+    overflow-x:auto;
+  }
+
+  .table-row{
+    min-width:600px;
+  }
+
 }
 
 .table-row div{
@@ -1016,6 +1046,48 @@ body{
 
   .process-right img{
     border-radius:18px;
+  }
+
+}
+/* =========================
+   PRODUCT MOBILE ORDER FIX
+========================= */
+
+@media(max-width:768px){
+
+  .product-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+  }
+
+  .product-content{
+    order:1;
+  }
+
+  .product-gallery{
+    order:2;
+  }
+
+  .main-image{
+    width:100%;
+    aspect-ratio:1/1;
+    height:auto;
+  }
+
+  .main-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .thumbnails{
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+  }
+
+  .thumb{
+    aspect-ratio:1/1;
   }
 
 }
