@@ -1057,6 +1057,10 @@ body{
    FINAL FOOTER CSS
 ========================= */
 
+/* =========================
+   FINAL FOOTER CSS
+========================= */
+
 .footer{
   width:100%;
   background:#fff;
@@ -1065,16 +1069,14 @@ body{
 
 .footer .container{
   width:100%;
-  max-width:1280px;
+  max-width:1240px;
   margin:auto;
-  padding:0 32px;
+  padding:0 20px;
 }
 
 /* TOP */
 
 .footer-top{
-  width:100%;
-
   border:1px solid #e5e5e5;
   border-radius:28px;
 
@@ -1090,15 +1092,14 @@ body{
 }
 
 .footer-top img{
-  width:150px;
+  width:180px;
 }
 
 .footer-top h3{
-  font-size:30px;
+  font-size:34px;
   line-height:1.4;
-  text-align:right;
   font-weight:500;
-  color:#111;
+  text-align:right;
 }
 
 .footer-top h3 span{
@@ -1108,8 +1109,6 @@ body{
 /* GRID */
 
 .footer-grid{
-  width:100%;
-
   display:grid;
 
   grid-template-columns:
@@ -1118,11 +1117,11 @@ body{
   1fr
   1.2fr;
 
-  gap:70px;
+  gap:60px;
 }
 
 .footer-col h4{
-  font-size:16px;
+  font-size:18px;
   margin-bottom:20px;
   color:#111;
 }
@@ -1145,8 +1144,8 @@ body{
 
 .footer-contact p{
   display:flex;
-  align-items:flex-start;
   gap:10px;
+  align-items:flex-start;
 }
 
 /* SOCIAL */
@@ -1158,12 +1157,12 @@ body{
   margin-top:20px;
   padding-top:20px;
 
-  border-top:1px solid #ececec;
+  border-top:1px solid #eee;
 }
 
 .social-icons a{
-  width:36px;
-  height:36px;
+  width:38px;
+  height:38px;
 
   border:1px solid #ddd;
   border-radius:50%;
@@ -1179,12 +1178,10 @@ body{
 /* BOTTOM */
 
 .footer-bottom{
-  width:100%;
-
-  border-top:1px solid #e5e5e5;
+  border-top:1px solid #eee;
 
   margin-top:50px;
-  padding:22px 0;
+  padding:24px 0;
 
   display:flex;
   justify-content:space-between;
@@ -1215,7 +1212,6 @@ body{
 
   .footer-grid{
     grid-template-columns:1fr 1fr;
-    gap:50px;
   }
 
 }
@@ -1228,20 +1224,15 @@ body{
     padding:60px 0 0;
   }
 
-  .footer .container{
-    padding:0 20px;
-  }
-
   .footer-top{
     flex-direction:column;
     text-align:center;
     padding:28px;
-    gap:24px;
   }
 
   .footer-top h3{
     text-align:center;
-    font-size:24px;
+    font-size:26px;
   }
 
   .footer-grid{
