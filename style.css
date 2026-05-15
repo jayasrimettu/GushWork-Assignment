@@ -1,13 +1,22 @@
-/* =====================================
-   FINAL RESPONSIVE FIXES
-   ADD THIS AT END OF CSS
-===================================== */
+/* =========================================
+   GLOBAL RESET
+========================================= */
 
-/* ---------- GLOBAL ---------- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-html,
+html{
+  scroll-behavior:smooth;
+}
+
 body{
+  font-family:Arial, sans-serif;
   overflow-x:hidden;
+  color:#111;
+  background:#fff;
 }
 
 img{
@@ -15,344 +24,443 @@ img{
   display:block;
 }
 
-.container{
-  width:100%;
-  max-width:1240px;
-  margin:auto;
-  padding-left:20px;
-  padding-right:20px;
+a{
+  text-decoration:none;
 }
 
-/* ---------- IMAGE FIX ---------- */
-
-.main-image{
-  aspect-ratio:1/1;
-  height:auto;
+button{
+  cursor:pointer;
+  transition:0.3s ease;
 }
 
-.application-card{
-  aspect-ratio:3/4;
-  height:auto;
+button:hover{
+  opacity:0.9;
 }
 
-.process-right img,
-.portfolio-card img{
-  width:100%;
-  height:auto;
-  object-fit:cover;
-}
-
-/* ---------- 1200px ---------- */
-
-@media(max-width:1200px){
-
-  .container{
-    padding-left:80px;
-    padding-right:80px;
-  }
-
-}
-
-/* ---------- 1080px ---------- */
-
-@media(max-width:1080px){
-
-  .container{
-    padding-left:60px;
-    padding-right:60px;
-  }
-
-  .product-wrapper,
-  .process-content,
-  .cta-wrapper{
-    grid-template-columns:1fr;
-  }
-
-  .feature-grid,
-  .portfolio-grid,
-  .testimonials-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .applications-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:42px;
-  }
-
-}
-
-/* ---------- 800px ---------- */
-
-@media(max-width:800px){
-
-  section{
-    padding-top:80px;
-    padding-bottom:80px;
-  }
-
-  .container{
-    padding-left:48px;
-    padding-right:48px;
-  }
-
-  .feature-grid,
-  .portfolio-grid,
-  .testimonials-grid,
-  .applications-grid,
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .buttons{
-    flex-direction:column;
-  }
-
-  .primary-btn,
-  .secondary-btn{
-    width:100%;
-  }
-
-  .catalogue-box,
-  .portfolio-cta{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .catalogue-right{
-    width:100%;
-  }
-
-  .catalogue-right input{
-    width:100%;
-  }
-
-  .resource-item{
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-  }
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:34px;
-  }
-
-}
-
-/* ---------- 600px ---------- */
-
-@media(max-width:600px){
-
-  .container{
-    padding-left:24px;
-    padding-right:24px;
-  }
-
-  .navbar{
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .nav-links{
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:16px;
-  }
-
-  .logo img{
-    width:150px;
-  }
-
-  
-
-  .phone-row{
-    flex-direction:column;
-  }
-
-  .phone-row select{
-    width:100%;
-  }
-
-  .catalogue-box,
-  .portfolio-cta,
-  .contact-form-box{
-    padding:28px;
-  }
-
-}
-
-/* ---------- 480px ---------- */
-
-@media(max-width:480px){
-
-  section{
-    padding-top:48px;
-    padding-bottom:48px;
-  }
-
-  .container{
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .nav-links{
-    flex-direction:column;
-  }
-
-  .contact-btn{
-    width:100%;
-    text-align:center;
-  }
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:28px;
-    line-height:1.2;
-  }
-
-  .feature-card,
-  .testimonial-card,
-  .portfolio-card{
-    padding:24px;
-  }
-
-  .feature-card h3,
-  .testimonial-card h3,
-  .portfolio-card h3{
-    font-size:22px;
-  }
-
-  .product-content p,
-  .feature-card p,
-  .testimonial-card p,
-  .portfolio-card p{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .certifications{
-    gap:8px;
-  }
-
-  .cert-box{
-    font-size:12px;
-    padding:8px 10px;
-  }
-
-  .badges{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .app-arrow{
-    width:50px;
-    height:50px;
-    font-size:20px;
-  }
-
-  .process-tab{
-    width:100%;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-  }
-
-}
-
-/* ---------- 360px ---------- */
-
-@media(max-width:360px){
-
-  .container{
-    padding-left:16px;
-    padding-right:16px;
-  }
-
-  .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
-    font-size:24px;
-  }
-
-  .feature-card,
-  .testimonial-card,
-  .portfolio-card,
-  .catalogue-box,
-  .portfolio-cta,
-  .contact-form-box{
-    padding:20px;
-  }
-
-  .footer-bottom p,
-  .footer-links a{
-    font-size:12px;
-  }
-
-}
 /* =========================================
-   FINAL FIGMA RESPONSIVE SPACING FIX
+   CONTAINER
 ========================================= */
 
-/* MAX WIDTH */
-
 .container{
-  max-width:1240px;
   width:100%;
+  max-width:1240px;
   margin:auto;
 }
 
-/* 1600px & 1440px */
+/* =========================================
+   SECTION SPACING
+========================================= */
 
 section{
   padding:100px 0;
 }
 
+/* =========================================
+   HEADER
+========================================= */
+
 .header{
+  width:100%;
   padding:24px 100px;
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-/* 1200px */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo img{
+  width:190px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#111;
+  font-size:16px;
+  font-weight:500;
+}
+
+.contact-btn{
+  background:#2e3192;
+  color:#fff !important;
+  padding:12px 22px;
+  border-radius:999px;
+}
+
+/* =========================================
+   PRODUCT SECTION
+========================================= */
+
+.product-page{
+  border-top:none;
+}
+
+.breadcrumb{
+  display:flex;
+  gap:10px;
+  font-size:14px;
+  color:#777;
+  margin-bottom:40px;
+}
+
+.product-wrapper{
+  display:grid;
+  grid-template-columns:48% 52%;
+  gap:60px;
+}
+
+.main-image{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border-radius:24px;
+  background:#f2f2f2;
+}
+
+.main-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.main-image:hover img{
+  transform:scale(1.05);
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+}
+
+.left-arrow{
+  left:20px;
+}
+
+.right-arrow{
+  right:20px;
+}
+
+.thumbnails{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+
+.thumb{
+  aspect-ratio:1/1;
+  border-radius:14px;
+  background:#eee;
+  border:1px solid #ddd;
+}
+
+.thumb.active{
+  border:2px solid #6c4cff;
+}
+
+.certifications{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+
+.cert-box{
+  border:1px solid #ddd;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.product-content h1{
+  font-size:56px;
+  line-height:1.1;
+  margin-bottom:28px;
+}
+
+.features{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-bottom:32px;
+}
+
+.features li{
+  position:relative;
+  padding-left:20px;
+}
+
+.features li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:8px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#4c48ff;
+}
+
+.price-box{
+  border:1px solid #e2e2e2;
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:24px;
+}
+
+.price-label{
+  color:#888;
+  margin-bottom:8px;
+}
+
+.badges{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+
+.badges span{
+  background:#fff3d6;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+.cert-text{
+  font-size:14px;
+  color:#666;
+}
+
+.buttons{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.primary-btn{
+  background:#2e3192;
+  color:#fff;
+  border:none;
+  padding:16px 24px;
+  border-radius:12px;
+}
+
+.secondary-btn{
+  background:transparent;
+  border:1px solid #2e3192;
+  padding:16px 24px;
+  border-radius:12px;
+}
+
+.secondary-btn:hover{
+  background:#2e3192;
+  color:#fff;
+}
+
+/* =========================================
+   BRANDS
+========================================= */
+
+.brands{
+  background:#fff;
+}
+
+.brands-content{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.brands-content h2{
+  font-size:20px;
+  color:#8c8c8c;
+}
+
+.brands-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+
+.brands-row img{
+  max-width:140px;
+  object-fit:contain;
+}
+
+/* =========================================
+   TECHNICAL SECTION
+========================================= */
+
+.technical{
+  background:#071224;
+  color:#fff;
+}
+
+.tech-heading{
+  margin-bottom:50px;
+}
+
+.tech-heading h2{
+  font-size:52px;
+  margin-bottom:20px;
+}
+
+.tech-heading p{
+  max-width:700px;
+  color:#b8c0cc;
+  line-height:1.7;
+}
+
+.tech-table{
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.table-row:last-child{
+  border-bottom:none;
+}
+
+.table-row div{
+  padding:22px 18px;
+}
+
+.table-head{
+  background:rgba(255,255,255,0.08);
+  font-weight:700;
+}
+
+.datasheet-btn-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+}
+
+.datasheet-btn{
+  background:transparent;
+  border:1px solid #4c7dff;
+  color:#fff;
+  padding:18px 28px;
+  border-radius:12px;
+}
+
+/* =========================================
+   COMMON GRIDS
+========================================= */
+
+.feature-grid,
+.portfolio-grid,
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.applications-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+  padding-top:100px;
+  background:#fff;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:50px;
+  margin-bottom:60px;
+}
+
+.footer-col{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.footer-col h4{
+  font-size:18px;
+}
+
+.footer-col a,
+.footer-col p{
+  color:#555;
+  line-height:1.7;
+}
+
+.footer-bottom{
+  border-top:1px solid #ddd;
+  padding:24px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.footer-links{
+  display:flex;
+  gap:24px;
+}
+
+.social-icons{
+  display:flex;
+  gap:16px;
+  margin-top:14px;
+}
+
+.social-icons a{
+  width:40px;
+  height:40px;
+  border:1px solid #ddd;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#555;
+}
+
+.social-icons a:hover{
+  background:#2e3192;
+  color:#fff;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media(max-width:1200px){
 
@@ -364,28 +472,12 @@ section{
     padding:24px 80px;
   }
 
-  .container{
-    padding-left:0;
-    padding-right:0;
-  }
-
 }
-
-/* 1080px */
 
 @media(max-width:1080px){
 
-  section{
-    padding:80px 0;
-  }
-
   .header{
     padding:24px 60px;
-  }
-
-  .container{
-    padding-left:0;
-    padding-right:0;
   }
 
   .product-wrapper,
@@ -396,17 +488,17 @@ section{
 
   .feature-grid,
   .portfolio-grid,
-  .testimonials-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
+  .testimonials-grid,
   .applications-grid{
     grid-template-columns:1fr 1fr;
   }
 
-}
+  .product-content h1,
+  .tech-heading h2{
+    font-size:42px;
+  }
 
-/* 800px */
+}
 
 @media(max-width:800px){
 
@@ -437,7 +529,24 @@ section{
 
 }
 
-/* 480px */
+@media(max-width:600px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+  }
+
+  .table-row{
+    grid-template-columns:1fr;
+  }
+
+}
 
 @media(max-width:480px){
 
@@ -449,100 +558,27 @@ section{
     padding:16px 20px;
   }
 
-  .navbar{
-    flex-direction:column;
-    gap:20px;
-  }
-
   .nav-links{
-    flex-wrap:wrap;
-    justify-content:center;
+    flex-direction:column;
     gap:14px;
   }
 
   .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
+  .tech-heading h2{
     font-size:30px;
-    line-height:1.2;
   }
 
 }
 
-/* 360px */
-
 @media(max-width:360px){
-
-  section{
-    padding:48px 0;
-  }
 
   .header{
     padding:14px 16px;
   }
 
   .product-content h1,
-  .tech-heading h2,
-  .feature-heading h2,
-  .faq-heading h2,
-  .applications-heading h2,
-  .process-heading h2,
-  .testimonials-heading h2,
-  .portfolio-heading h2,
-  .section-heading h2,
-  .cta-content h2{
+  .tech-heading h2{
     font-size:26px;
-  }
-
-}
-/* FIX ORIGINAL COLORS */
-
-.technical{
-  background:#071224;
-  color:#fff;
-}
-
-.features-section,
-.faq-section,
-.applications-section,
-.process-section,
-.testimonials-section,
-.portfolio-section{
-  background:#fafafa;
-}
-
-.resources{
-  background:#fff;
-}
-
-/* FIX TABLE */
-
-.tech-table{
-  display:block;
-}
-
-.table-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-}
-
-.table-head{
-  background:rgba(255,255,255,0.08);
-}
-
-/* MOBILE TABLE ONLY */
-
-@media(max-width:600px){
-
-  .table-row{
-    grid-template-columns:1fr;
   }
 
 }
